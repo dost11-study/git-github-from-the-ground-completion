@@ -10,3 +10,16 @@
 conflict가 날 경우 staging area에서 unmerged path 상태가 되면서 commit 생성 과정에 실패한다 (수동 conflict 해결 필요)
 staging area의 conflict를 해결하고 다시 add 한 후 `git cherry-pick --continue`를 통해 체리픽 커밋을 생성한다
 
+## 브랜치를 이동할 때 주의할 점
+
+- 다른 브랜치로 이동할 때, working directory나 staging area에 수정한 내용이 남아 있으면 안됨
+- 다른 브랜치로 이동할 수 없다고 오류가 뜸
+- 수정할 내용을 Commit으로 저장하면, 다른 브랜치로 이동할 수 있음 (stash도 가능)
+
+**working directory clean**
+- untracked 상태는 비어있고, tracked 상태와 staging area 그리고 최신 커밋이 똑같은 상태일 경우
+- working directory clean 상태에서는 다른 브랜치로 이동이 가능하다
+
+## 
+
+
