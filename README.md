@@ -34,13 +34,19 @@ fast-forward 머지는 선형적으로 커밋 히스토리가 단순하지만, 3
 
 왜 rebase인가?
 
-![image](./images/Pasted image 20251008105951.png)
+![image](./images/Pasted%20image%2020251008105951.png)
 
 위의 사진처럼 base 자체를 변경시킨다
 
-![image](./images/Pasted image 20251008110116.png)
+![image](./images/Pasted%20image%2020251008110116.png)
 
 base를 변경시켜서 base 이후로 test 브랜치에만 커밋이 있는 상태로 변경시키기 때문에 fast-forward 머지가 가능하다
 
-`rebase` 시에도 마찬가지로 conflict가 발생할 수 있다
+`rebase`는 사실 queue 형태로 동작하지 않지만(이해를 돕기 위해 사용된 표현), rebase 시 test 브랜치에 있는 diff들을 main 브랜치 head 부터 하나씩 working directory tracked와 staging area에 반영하고 커밋을 생성한다
 
+![image](./images/Pasted%20image%2020251008134808.png)
+
+![image](./images/Pasted%20image%2020251008134834.png)
+
+`rebase` 시에도 마찬가지로 conflict가 발생할 수 있다
+conflict가 발생 시 수동으로 해결하고, `git rebase --continue`를 통해 커밋을 만들고 리베이스 과정을 재개한다. (남은 diff 꺼내면서 rebase 진행함)
