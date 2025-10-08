@@ -42,3 +42,5 @@ fast-forward 머지는 선형적으로 커밋 히스토리가 단순하지만, 3
 
 base를 변경시켜서 base 이후로 test 브랜치에만 커밋이 있는 상태로 변경시키기 때문에 fast-forward 머지가 가능하다
 
+`rebase` 시에도 마찬가지로 conflict가 발생할 수 있다
+
