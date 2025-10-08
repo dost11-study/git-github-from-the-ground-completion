@@ -20,6 +20,9 @@ staging area의 conflict를 해결하고 다시 add 한 후 `git cherry-pick --c
 - untracked 상태는 비어있고, tracked 상태와 staging area 그리고 최신 커밋이 똑같은 상태일 경우
 - working directory clean 상태에서는 다른 브랜치로 이동이 가능하다
 
-## 
+## working directory clean
 
+![image](./images/Pasted%20image%2020251008105028.png)
+
+working directory가 clean한 상태에서만 `merge`, `checkout`, `cherry-pick` 이 가능하다
 
