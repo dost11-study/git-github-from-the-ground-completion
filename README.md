@@ -26,3 +26,4 @@ staging area의 conflict를 해결하고 다시 add 한 후 `git cherry-pick --c
 
 working directory가 clean한 상태에서만 `merge`, `checkout`, `cherry-pick` 이 가능하다
 
+## rebase
