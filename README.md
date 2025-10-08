@@ -27,3 +27,18 @@ staging area의 conflict를 해결하고 다시 add 한 후 `git cherry-pick --c
 working directory가 clean한 상태에서만 `merge`, `checkout`, `cherry-pick` 이 가능하다
 
 ## rebase
+
+`merge`를 수행할 때 3-way 머지를 수행할지, fast-forward를 수행할지 직접 정할 수가 없다.
+fast-forward 머지는 선형적으로 커밋 히스토리가 단순하지만, 3-way 머지는 복잡하다.
+3-way 머지를 할 수 밖에 없는 상황에서 `rebase`를 통해 3-way 머지의 커밋 히스토리를 단순하게 선형적으로 변경시킬 수 있다.
+
+왜 rebase인가?
+
+![image](./images/Pasted image 20251008105951.png)
+
+위의 사진처럼 base 자체를 변경시킨다
+
+![image](./images/Pasted image 20251008110116.png)
+
+base를 변경시켜서 base 이후로 test 브랜치에만 커밋이 있는 상태로 변경시키기 때문에 fast-forward 머지가 가능하다
+
